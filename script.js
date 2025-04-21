@@ -6,3 +6,10 @@ for (let i = 0; i < 16; i++) {
 		squareContainer.appendChild(squareDiv);
 	}
 }
+
+squareContainer.addEventListener("mouseover", trail);
+
+function trail(e) {
+	if (e.target.className != "grid-squares")
+		e.target.style.backgroundColor = "black";
+}
