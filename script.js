@@ -28,7 +28,13 @@ squareContainer.addEventListener("mouseover", trail);
 
 function trail(e) {
 	if (e.target.className != "grid-squares")
-		e.target.style.backgroundColor = "black";
+		//e.target.style.backgroundColor = "black";
+		///random RGB values
+		e.target.style.backgroundColor = `rgb(${Math.floor(
+			Math.random() * 255
+		)},${Math.floor(Math.random() * 255)},${Math.floor(
+			Math.random() * 255
+		)})`;
 }
 
 let newGridBtn = document.getElementById("new-grid");
