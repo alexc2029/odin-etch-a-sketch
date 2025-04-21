@@ -25,7 +25,7 @@ function createGrid(size) {
 }
 createGrid(16);
 squareContainer.addEventListener("mouseover", trail);
-
+let opacity = 0;
 function trail(e) {
 	if (e.target.className != "grid-squares")
 		//e.target.style.backgroundColor = "black";
@@ -35,6 +35,9 @@ function trail(e) {
 		)},${Math.floor(Math.random() * 255)},${Math.floor(
 			Math.random() * 255
 		)})`;
+	e.target.style.opacity = `${opacity}%`;
+	if (opacity == 100) opacity = 0;
+	else opacity += 10;
 }
 
 let newGridBtn = document.getElementById("new-grid");
